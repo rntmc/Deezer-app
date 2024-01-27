@@ -10,7 +10,7 @@ export function FrontPage({ favorites, setFavorites }) {
   const [results, setResults] = useState([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentPreview, setCurrentPreview] = useState(null);
-  const [duration, setDuration] =useState("")
+  const [duration, setDuration] =useState()
 
   const audioRef = useRef();
 
@@ -50,6 +50,20 @@ export function FrontPage({ favorites, setFavorites }) {
 
     fetchResults();
   }, [searchInput]);  
+
+  // const handleFavorite = (result) => {
+  //   const isFavorited = favorites.some((fav) => fav.id === result.id);
+
+  //   if (isFavorited) {
+  //     // Remove do array de favoritos
+  //     setFavorites((prevFavorites) =>
+  //       prevFavorites.filter((fav) => fav.id !== result.id)
+  //     );
+  //   } else {
+  //     // Adiciona ao array de favoritos
+  //     setFavorites((prevFavorites) => [...prevFavorites, result]);
+  //   }
+  // };
 
   const handlePlayPause = (preview) => {
     if (isPlaying && currentPreview === preview) {
@@ -94,6 +108,14 @@ export function FrontPage({ favorites, setFavorites }) {
       <AlbumList>
         {results.map((result) => (
           <AlbumCard key={result.id}>
+            {/* <button
+              className={`favorite ${
+                favorites.some((fav) => fav.id === result.id) ? "favorited" : ""
+              }`}
+              onClick={() => handleFavorite(result)}
+            >
+              <FaHeart />
+            </button> */}
             <img
               src={result.album?.cover_medium || result.artist.picture_medium}
               alt={result.title}
