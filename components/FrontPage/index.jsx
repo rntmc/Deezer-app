@@ -10,7 +10,7 @@ export function FrontPage({ favorites, setFavorites }) {
   const [results, setResults] = useState([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentPreview, setCurrentPreview] = useState(null);
-  const [duration, setDuration] =useState()
+  const [duration, setDuration] = useState()
 
   const audioRef = useRef();
 
