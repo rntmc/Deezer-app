@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaHeart} from "react-icons/fa";
 
 import {Container,MusicList, CardWrapper, Title } from "./styles"
 
@@ -23,12 +24,17 @@ export function Top10() {
     fetchTopTracks ();
   }, []);
 
+  
+
   return(
     <Container>
       <h1>Top 10 Músicas Do Momento</h1>
       <MusicList>
         {topTracks.map((track) => (
           <CardWrapper key={track.id}>
+            <button className="favorite-button">
+              <FaHeart />
+            </button>
             <img src={track.album.cover_medium} alt={track.title} />
             <div className="info">
               <h3>{track.title}</h3>

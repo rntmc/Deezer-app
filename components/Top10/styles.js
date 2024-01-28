@@ -84,4 +84,20 @@ export const CardWrapper = styled.div`
   audio {
       width: 100%;
     }
+
+    .favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
+    font-size: 24px;
+
+    &:hover {
+      color: ${({ theme }) => theme.COLORS.TOMATO_300};
+    }
+  }
 `;
