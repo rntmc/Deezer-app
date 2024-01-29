@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width:100%;
+  width: 100%;
   height: 100vh;
-
   display: grid;
-  grid-template-rows: 104px auto 77px;
-  grid-area:
-  "header"
-  "main"
-  "footer";
-
-  background-color: ${({theme}) => theme.COLORS.DARK_400};
+  grid-template-rows: 104px auto;
+  grid-area: "header" "main";
+  background-color: ${({ theme }) => theme.COLORS.DARK_400};
+  padding: 0 124px;
 
   > h1 {
     align-self: center;
@@ -19,21 +15,79 @@ export const Container = styled.div`
   }
 `;
 
-export const AlbumList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+export const MusicList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   justify-content: space-around;
-  padding: 0 124px;
-  margin-top: 24px;
 `;
 
-export const AlbumCard = styled.div`
+export const CardWrapper = styled.div`
+  background-color: ${({ theme }) => theme.COLORS.DARK_500};
+  border-radius: 8px;
+  overflow: hidden;
   position: relative;
-  width: 200px;
-  margin: 10px;
-  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+  max-height: 48vh;
 
-  .favorite {
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .info {
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
+
+    h3 {
+      padding: 0 8px;
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    p {
+      padding: 0 8px;
+      margin: 0;
+      font-size: 14px;
+      color: ${({ theme }) => theme.COLORS.LIGHT_300};
+    }
+
+    .deezer-link {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+
+      a {
+        color: ${({ theme }) => theme.COLORS.LIGHT_300};
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+
+        i {
+          margin-right: 4px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .audio-player {
+    margin-top: 16px;
+  }
+
+  audio {
+      width: 100%;
+    }
+
+    .favorite {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -53,70 +107,7 @@ export const AlbumCard = styled.div`
     }
   }
 
-  img {
-    width: 100%;
-    border-radius: 8px;
-  }
-
-  p {
-    margin-top: 5px;
-    font-weight: bold;
-  }
-
-  button:first-child{
-    border: none;
-    display: flex;
-
-    svg {
-      color: none;
-    }
-  }
-
-  .buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:12px;
-    margin-top: 6px;
-  }
-
-  button:last-child {
-    background-color:${({theme}) => theme.COLORS.CAKE_100};
-    border: none;
-    border-radius: 4px;
-    padding: 3px;
-    font-size: 12px;
-
-    &:hover {
-      background-color: ${({ theme }) => theme.COLORS.CAKE_200};
-    }
-  }
-
-  a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;   
-  }
-
-  .playPauseButton {
-    background-color: ${({ theme }) => theme.COLORS.CAKE_100};
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      background-color: ${({ theme }) => theme.COLORS.CAKE_200};
-    }
-  }
-
   audio {
     width:100%;
   }
 `;
-
