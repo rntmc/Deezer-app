@@ -5,13 +5,17 @@ export const Container = styled.header`
   width: 100%;
   
   display: grid;
-  grid-template-columns: 196px auto 216px;
+  grid-template-columns: 196px auto 180px;
   align-items:center;
-  gap: 32px;
+  gap: 16px;
   
   padding: 24px 124px;
   
   background-color: ${({theme}) => theme.COLORS.DARK_600};
+
+  .buscar {
+    background-color: ${({ theme }) => theme.COLORS.CAKE_100};
+    }
 `;
 
 export const Profile = styled.div`

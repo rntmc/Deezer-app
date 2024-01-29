@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from 'next/link'
 import { GiMusicalNotes } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
 import { Button } from '../Button';
@@ -9,6 +10,7 @@ import {Container, Profile} from './styles'
 
 export function Header({onSearchChange, ...rest}) {
   const [searchInput, setSearchInput] = useState('');
+  const [currentPath, setCurrentPath] = useState('');
 
   const handleSearchChange = (value) => {
     setSearchInput(value);
@@ -16,6 +18,22 @@ export function Header({onSearchChange, ...rest}) {
       onSearchChange(value);
     }
   };
+
+  const navigateToPage = () => {
+    // Verifica se a rota atual é "/favorites" e redireciona para a página principal ("/")
+    if (currentPath === '/') {
+      window.location.href = '/favorites';
+    } else {
+      // Se não estiver na página de favoritos, direciona para "/"
+      window.location.href = '/';
+    }
+  };
+
+  useEffect(() => {
+    // Atualiza o estado currentPath sempre que a rota muda
+    setCurrentPath(window.location.pathname);
+  }, []);
+  
 
   return(
     <Container {...rest}>
@@ -33,7 +51,8 @@ export function Header({onSearchChange, ...rest}) {
         placeholder="Busque por artista, album ou musica"
       />
 
-        <Button title="Favoritos"/>
+      <Button title={currentPath === '/' ? 'Favoritos' : 'Home'} onClick={navigateToPage}/>
+
 
     </Container>
   )
