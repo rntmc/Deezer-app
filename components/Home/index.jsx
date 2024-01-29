@@ -28,6 +28,12 @@ export function Home() {
       setFavorites((prevFavorites) => [...prevFavorites, result]);
     }
   };
+
+  const formatDuration = (durationInSeconds) => {
+    const minutes = Math.floor(durationInSeconds / 60);
+    const seconds = durationInSeconds % 60;
+    return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
   
   useEffect(() => {
     const fetchTopTracks  = async () => {
@@ -106,7 +112,7 @@ export function Home() {
               <div className="info">
                 <h3>{track.title}</h3>
                 <p>Artista: {track.artist.name}</p>
-                <p>Duração: {track.duration} segundos</p>
+                <p>Duração: {formatDuration(track.duration)}</p>
                 <audio controls className="audio-player">
                   <source src={track.preview} type="audio/mp3" />
                   Seu navegador não suporta o elemento de áudio.
@@ -143,7 +149,7 @@ export function Home() {
               <div className="info">
                 <h3>{result.title}</h3>
                 <p>Artista: {result.artist.name}</p>
-                <p>Duração: {result.duration} segundos</p>
+                <p>Duração: {formatDuration(result.duration)}</p>
                 <audio controls className="audio-player">
                   <source src={result.preview} type="audio/mp3" />
                   Seu navegador não suporta o elemento de áudio.

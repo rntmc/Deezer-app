@@ -4,8 +4,8 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 104px auto 77px;
-  grid-area: "header" "main" "footer";
+  grid-template-rows: 104px auto;
+  grid-area: "header" "main";
   background-color: ${({ theme }) => theme.COLORS.DARK_400};
   padding: 0 124px;
 
@@ -36,7 +36,7 @@ export const CardWrapper = styled.div`
 
   img {
     width: 100%;
-    height: 200px;
+    height: 230px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
   }

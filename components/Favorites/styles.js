@@ -29,7 +29,6 @@ export const CardWrapper = styled.div`
   position: relative;
   transition: transform 0.3s ease;
   margin-bottom: 10px;
-  max-height: 48vh;
 
   &:hover {
     transform: scale(1.05);
@@ -37,7 +36,7 @@ export const CardWrapper = styled.div`
 
   img {
     width: 100%;
-    height: 200px;
+    height: 230px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
   }
