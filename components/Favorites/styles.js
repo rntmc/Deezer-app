@@ -12,6 +12,11 @@ export const Container = styled.div`
   "footer";
 
   background-color: ${({theme}) => theme.COLORS.DARK_400};
+
+  > h1 {
+    align-self: center;
+    justify-self: center;
+  }
 `;
 
 export const AlbumList = styled.div`

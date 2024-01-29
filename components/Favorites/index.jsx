@@ -31,6 +31,7 @@ export function Favorites () {
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <Container>
+      <h1>Suas Musicas Favoritas</h1>
         <AlbumList>
           {favorites.map((favorite) => (
             <AlbumCard key={favorite.id}>
