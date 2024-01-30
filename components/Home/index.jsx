@@ -3,9 +3,10 @@ import { useState, useEffect, useRef } from "react";
 import { FaHeart} from "react-icons/fa";
 import {useLocalStorage} from "@hooks/useLocalStorage";
 import { Header } from "@components/Header";
-import {Container,MusicList, CardWrapper } from "./styles"
+import {Container,MusicList, CardWrapper, LoadingContainer, LoadingContent } from "./styles"
 
 export function Home() {
+  const [loading, setLoading] = useState(true);
   const [topTracks, setTopTracks] = useState([]);
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
   const [searchInput, setSearchInput] = useState("");
@@ -36,8 +37,10 @@ export function Home() {
   };
   
   useEffect(() => {
-    const fetchTopTracks  = async () => {
+    const fetchTopTracks = async () => {
       try {
+        setLoading(true);
+
         const response = await fetch("/api/chart");
         if (response.ok) {
           const data = await response.json();
@@ -47,10 +50,12 @@ export function Home() {
         }
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchTopTracks ();
+    fetchTopTracks();
   }, []);
 
   useEffect(() => {
@@ -88,9 +93,18 @@ export function Home() {
     };
 
     fetchResults();
-  }, [searchInput]);      
-
+  }, [searchInput]);     
+   
   return(
+      <>
+      {loading ? (
+       <LoadingContainer>
+        <LoadingContent>
+        <iframe src="https://giphy.com/embed/iQaJmNecCFyJNnpMxi" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/marenmorris-maren-morris-humble-quest-iQaJmNecCFyJNnpMxi"></a></p>
+          <p>Loading...</p>
+        </LoadingContent>
+      </LoadingContainer>
+      ) : (
       <>
       <Header onSearchChange={setSearchInput}/>
       <Container>
@@ -107,7 +121,7 @@ export function Home() {
                 onClick={() => handleFavorite(track)}
               >
                 <FaHeart />
-              </button>
+              </button >
               <img src={track.album.cover_medium} alt={track.title} />
               <div className="info">
                 <h3>{track.title}</h3>
@@ -168,6 +182,8 @@ export function Home() {
         </> 
         )}
         </Container>
+      </>
+      )}
     </>
   )
 }

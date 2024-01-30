@@ -110,3 +110,14 @@ export const CardWrapper = styled.div`
     width:100%;
   }
 `;
+
+export const LoadingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+`;
+
+export const LoadingContent = styled.div`
+  text-align: center;
+`;
