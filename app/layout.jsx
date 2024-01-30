@@ -6,6 +6,9 @@ export const metadata = {
 const RootLayout = ({children}) => {
   return (
     <html lang='en'>
+      <head>
+        <link rel="icon" href="../assets/icons8-audio-wave.gif" />
+      </head>
       <body>
         <main>
           {children}
