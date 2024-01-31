@@ -18,8 +18,6 @@ Instalação e Execução do Projeto
 
 Para rodar o projeto, execute o seguinte comando no terminal:
 
-bash
-
 npm run dev
 
 O aplicativo estará disponível em http://localhost:3000.
