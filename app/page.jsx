@@ -1,24 +1,19 @@
 "use client"
 
-import { useState } from 'react';
-
 import { ThemeProvider } from 'styled-components';
-import GlobalStyles from '@styles/global'
+import GlobalStyles from '@/styles/global'
 import theme from '@styles/theme';
 
-import { Header } from "../components/Header"
-import { Top10 } from "../components/Top10"
+import { Home } from "../components/Home"
 
-const Home = () => {
+const FrontPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
-
-      <Header/>
-      <Top10/>
+      <Home />
     </ThemeProvider>
   )
 }
 
-export default Home
+export default FrontPage
