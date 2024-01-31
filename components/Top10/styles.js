@@ -85,19 +85,27 @@ export const CardWrapper = styled.div`
       width: 100%;
     }
 
-    .favorite-button {
+    .favorite {
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 2;
-    background-color: transparent;
+    background: transparent;
     border: none;
     cursor: pointer;
-    color: ${({ theme }) => theme.COLORS.LIGHT_400};
-    font-size: 24px;
 
-    &:hover {
-      color: ${({ theme }) => theme.COLORS.TOMATO_300};
+    svg {
+      color: ${({theme}) => theme.COLORS.LIGHT_400};
+      font-size: 24px;
     }
+
+    &.favorited {
+      svg {
+        color: ${({theme}) => theme.COLORS.TOMATO_300}; /* Cor do ícone de coração preenchido */
+      }
+    }
+  }
+
+  audio {
+    width:100%;
   }
 `;

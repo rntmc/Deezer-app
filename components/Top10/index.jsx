@@ -1,10 +1,31 @@
+//Logica para usar no componente Home
+
+import axios from "axios"
 import { useState, useEffect } from "react";
 import { FaHeart} from "react-icons/fa";
+import {useLocalStorage} from "@hooks/useLocalStorage";
 
 import {Container,MusicList, CardWrapper, Title } from "./styles"
 
 export function Top10() {
   const [topTracks, setTopTracks] = useState([]);
+  const [favorites, setFavorites] = useLocalStorage("favorites", []);
+  
+  const handleFavorite = (result) => {
+    const isFavorited = favorites.some((fav) => fav.id === result.id);
+    
+    if (isFavorited) {
+      console.log(`Removendo favorito: ${result.title}`);
+      // Remove do array de favoritos
+      setFavorites((prevFavorites) =>
+      prevFavorites.filter((fav) => fav.id !== result.id)
+      );
+    } else {
+      console.log(`Adicionando favorito: ${result.title}`);
+      // Adiciona ao array de favoritos
+      setFavorites((prevFavorites) => [...prevFavorites, result]);
+    }
+  };
   
   useEffect(() => {
     const fetchTopTracks  = async () => {
@@ -23,8 +44,7 @@ export function Top10() {
 
     fetchTopTracks ();
   }, []);
-
-  
+    
 
   return(
     <Container>
@@ -32,7 +52,12 @@ export function Top10() {
       <MusicList>
         {topTracks.map((track) => (
           <CardWrapper key={track.id}>
-            <button className="favorite-button">
+            <button 
+              className={`favorite ${
+                favorites.some((fav) => fav.id === track.id) ? "favorited" : ""
+              }`}
+              onClick={() => handleFavorite(track)}
+            >
               <FaHeart />
             </button>
             <img src={track.album.cover_medium} alt={track.title} />
