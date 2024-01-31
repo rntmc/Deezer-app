@@ -1,10 +1,8 @@
 //Logica para usar no componente Home
 
-import axios from "axios"
 import { useState, useEffect } from "react";
 import { FaHeart} from "react-icons/fa";
 import {useLocalStorage} from "@hooks/useLocalStorage";
-
 import {Container,MusicList, CardWrapper, Title } from "./styles"
 
 export function Top10() {
