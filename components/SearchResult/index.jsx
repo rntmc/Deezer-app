@@ -2,7 +2,7 @@
 
 import axios from "axios"
 import { useState, useEffect, useRef  } from "react";
-import { FaHeart, FaPlay, FaPause } from "react-icons/fa";
+import { FaHeart} from "react-icons/fa";
 
 import { Header } from "../../components/Header"
 import { Container, AlbumList, AlbumCard} from "./styles"
