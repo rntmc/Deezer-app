@@ -47,28 +47,28 @@ my-deezer/
 |   |-- favorites/
 |   |   |-- page.jsx
 |   |   |-- layout.jsx
-|   |-- components/
-|       |-- Button/
-|       |   |-- index.jsx/
-|       |   |-- styles.jsx/
-|       |-- Favorites/
-|       |   |-- index.jsx/
-|       |   |-- styles.jsx/
-|       |-- Header/
-|       |   |-- index.jsx/
-|       |   |-- styles.jsx/
-|       |-- Home/
-|       |   |-- index.jsx/
-|       |   |-- styles.jsx/
-|       |-- Input/
-|       |   |-- index.jsx/
-|       |   |-- styles.jsx/
-|       |-- SearchResult/
-|       |   |-- index.jsx/
-|       |   |-- styles.jsx/
-|       |-- Top10/
-|           |-- index.jsx/
-|           |-- styles.jsx/
+|-- components/
+|   |-- Button/
+|   |   |-- index.jsx/
+|   |   |-- styles.jsx/
+|-- Favorites/
+|   |-- index.jsx/
+|   |-- styles.jsx/
+|-- Header/
+|   |-- index.jsx/
+|   |-- styles.jsx/
+|-- Home/
+|   |-- index.jsx/
+|   |-- styles.jsx/
+|-- Input/
+|   |-- index.jsx/
+|   |-- styles.jsx/
+|-- SearchResult/
+|   |-- index.jsx/
+|   |-- styles.jsx/
+|-- Top10/
+|   |-- index.jsx/
+|   |-- styles.jsx/
 |-- hooks/
 |   |-- useLocalStorage.js
 |-- public/
@@ -83,6 +83,7 @@ my-deezer/
 |-- package-lock.json
 |-- package.json
 |-- README.md
+
 
 
 Inclusão de Créditos
