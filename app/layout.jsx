@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Deezer-app",
+  title: "My-Deezer",
   description: "Your favorite music app",
 };
 
