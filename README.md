@@ -28,13 +28,13 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 O My-Deezer não requer autenticação. Ao acessar a página inicial, o conteúdo estará imediatamente disponível para utilização. A interface inclui um cabeçalho com o logo do app, uma barra de pesquisa e um botão de navegação para a página de favoritos.
 
-    Busca e Reprodução: O usuário pode inserir informações na barra de pesquisa para buscar músicas, artistas ou álbuns específicos. O player embutido permite ouvir prévias, fazer downloads e ajustar a velocidade da reprodução da música.
+Busca e Reprodução: O usuário pode inserir informações na barra de pesquisa para buscar músicas, artistas ou álbuns específicos. O player embutido permite ouvir prévias, fazer downloads e ajustar a velocidade da reprodução da música.
 
-    Top 10: A tela inicial exibe as Top 10 músicas mais tocadas no Deezer, mas o conteúdo é dinâmico conforme o usuário realiza buscas específicas.
+Top 10: A tela inicial exibe as Top 10 músicas mais tocadas no Deezer, mas o conteúdo é dinâmico conforme o usuário realiza buscas específicas.
 
-    Link para o Deezer: Cada música possui um link que direciona o usuário para a página correspondente no Deezer, permitindo uma audição completa.
+Link para o Deezer: Cada música possui um link que direciona o usuário para a página correspondente no Deezer, permitindo uma audição completa.
 
-    Favoritos: O usuário pode salvar suas músicas favoritas clicando no ícone de coração. Ao entrar na página de favoritos, encontrará sua lista completa com as mesmas funcionalidades da página inicial, além de um botão para retornar à página inicial.
+Favoritos: O usuário pode salvar suas músicas favoritas clicando no ícone de coração. Ao entrar na página de favoritos, encontrará sua lista completa com as mesmas funcionalidades da página inicial, além de um botão para retornar à página inicial.
 
 ##  Créditos
 
