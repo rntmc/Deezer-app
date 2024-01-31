@@ -68,7 +68,6 @@ export function Favorites () {
         console.error("Erro ao obter informações:", error);
       }
     };
-
     fetchResults();
   }, [searchInput]);      
 
@@ -79,6 +78,11 @@ export function Favorites () {
       {searchInput === "" ? (
       <>
       <h1>Suas Musicas Favoritas</h1>
+          {favorites.length === 0 ? (
+            <div className="empty-favorites-message">
+              <p>Você não tem músicas favoritas selecionadas... 😞</p>
+            </div>
+          ) : (
         <MusicList>
           {favorites.map((favorite) => (
             <CardWrapper key={favorite.id}>
@@ -112,6 +116,7 @@ export function Favorites () {
             </CardWrapper>
           ))}
         </MusicList>
+        )}
         <audio ref={audioRef}></audio>
         </>
       ) : (
