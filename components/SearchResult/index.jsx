@@ -50,56 +50,12 @@ export function SearchResult() {
     fetchResults();
   }, [searchInput]);  
 
-  // const handleFavorite = (result) => {
-  //   const isFavorited = favorites.some((fav) => fav.id === result.id);
-
-  //   if (isFavorited) {
-  //     // Remove do array de favoritos
-  //     setFavorites((prevFavorites) =>
-  //       prevFavorites.filter((fav) => fav.id !== result.id)
-  //     );
-  //   } else {
-  //     // Adiciona ao array de favoritos
-  //     setFavorites((prevFavorites) => [...prevFavorites, result]);
-  //   }
-  // };
-
-  // const handlePlayPause = (preview) => {
-  //   if (isPlaying && currentPreview === preview) {
-  //     // Se já estiver tocando e clicou novamente na mesma música, pausa
-  //     setIsPlaying(false);
-  //     setCurrentPreview(null);
-  //   } else {
-  //     // Se não estiver tocando ou clicou em uma música diferente, inicia a reprodução
-  //     setIsPlaying(true);
-  //     setCurrentPreview(preview);
-  //   }
-  // };
-
   const formatDuration = (durationInSeconds) => {
     const minutes = Math.floor(durationInSeconds / 60);
     const seconds = Math.floor(durationInSeconds % 60);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
-  
 
-  // useEffect(() => {
-  //   if (isPlaying && currentPreview) {
-  //     // Se está tocando e há uma prévia selecionada, reproduz a música
-  //     audioRef.current.src = currentPreview;
-  //     audioRef.current.play();
-  //   } else {
-  //     // Se não está tocando, pausa a música
-  //     audioRef.current.pause();
-  //   }
-  // }, [isPlaying, currentPreview]);
-
-  // useEffect(() => {
-  //   // Atualiza a duração quando a música é carregada
-  //   audioRef.current.addEventListener("loadedmetadata", () => {
-  //     setDuration(audioRef.current.duration);
-  //   });
-  // }, [currentPreview]);
   
   return (
     <Container>
