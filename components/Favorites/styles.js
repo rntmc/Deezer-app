@@ -8,11 +8,23 @@ export const Container = styled.div`
   grid-area: "header" "main";
   background-color: ${({ theme }) => theme.COLORS.DARK_400};
   padding: 0 124px;
+  height: 50px;
 
   > h1 {
     align-self: center;
     justify-self: center;
   }
+
+.empty-favorites-message,
+.empty-results-message {
+  color: ${({ theme }) => theme.COLORS.LIGHT_300};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 18px;
+ 
+}
 `;
 
 export const MusicList = styled.div`
@@ -101,12 +113,12 @@ export const CardWrapper = styled.div`
 
     &.favorited {
       svg {
-        color: ${({theme}) => theme.COLORS.TOMATO_300}; /* Cor do ícone de coração preenchido */
-      }
+        color: ${({theme}) => theme.COLORS.TOMATO_300};
     }
   }
 
   audio {
     width:100%;
   }
+}
 `;
