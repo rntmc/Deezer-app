@@ -35,57 +35,6 @@ O My-Deezer não requer autenticação. Ao acessar a página inicial, o conteúd
 
     Link para o Deezer: Cada música possui um link que direciona o usuário para a página correspondente no Deezer, permitindo uma audição completa.
 
-Estrutura de diretórios
-
-my-deezer/
-|-- app/
-|   |-- layout.jsx
-|   |-- page.jsx
-|   |-- api/
-|   |   |-- chart/
-|   |   |   |-- route.js
-|   |-- favorites/
-|   |   |-- page.jsx
-|   |   |-- layout.jsx
-|-- components/
-|   |-- Button/
-|   |   |-- index.jsx/
-|   |   |-- styles.jsx/
-|-- Favorites/
-|   |-- index.jsx/
-|   |-- styles.jsx/
-|-- Header/
-|   |-- index.jsx/
-|   |-- styles.jsx/
-|-- Home/
-|   |-- index.jsx/
-|   |-- styles.jsx/
-|-- Input/
-|   |-- index.jsx/
-|   |-- styles.jsx/
-|-- SearchResult/
-|   |-- index.jsx/
-|   |-- styles.jsx/
-|-- Top10/
-|   |-- index.jsx/
-|   |-- styles.jsx/
-|-- hooks/
-|   |-- useLocalStorage.js
-|-- public/
-|   |-- assets/
-|       |-- icons8-audio-wave.gif
-|-- styles/
-|   |-- global.js
-|   |-- theme.js
-|-- .gitignore
-|-- jsconfig.json
-|-- next.config.mjs
-|-- package-lock.json
-|-- package.json
-|-- README.md
-
-
-
 Inclusão de Créditos
 
 Os dados do API da Deezer foram obtidos seguindo as instruções disponíveis em Deezer Developers, além de materiais encontrados em buscas no Google e vídeos no YouTube. Agradecimentos à comunidade Deezer pela disponibilidade e documentação útil.
