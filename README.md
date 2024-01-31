@@ -38,5 +38,5 @@ Favoritos: O usuário pode salvar suas músicas favoritas clicando no ícone de 
 
 ##  Créditos
 
-> Os dados do API da Deezer foram obtidos seguindo as instruções disponíveis em [Deezer Developers](https://developers.deezer.com/), além de materiais encontrados em buscas no Google e vídeos no YouTube.
-> Agradecimentos à comunidade Deezer pela disponibilidade e documentação útil.
+Os dados do API da Deezer foram obtidos seguindo as instruções disponíveis em [Deezer Developers](https://developers.deezer.com/), além de materiais encontrados em buscas no Google e vídeos no YouTube.
+Agradecimentos à comunidade Deezer pela disponibilidade e documentação útil.
