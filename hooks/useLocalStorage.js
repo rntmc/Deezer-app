@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 export function useLocalStorage(key, initial) {
-  const isLocalStorageAvailable = typeof window !== 'undefined' && window.localStorage;
   
   const getSavedValue = () => {
     const savedValue = JSON.parse(localStorage.getItem(key));
