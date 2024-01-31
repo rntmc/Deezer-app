@@ -8,13 +8,13 @@ O My-Deezer é uma aplicação web que proporciona aos usuários uma experiênci
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-    *React*: Uma biblioteca JavaScript para construção de interfaces de usuário, que proporciona a criação de componentes reutilizáveis e uma atualização eficiente do DOM.
+    *React* : Uma biblioteca JavaScript para construção de interfaces de usuário, que proporciona a criação de componentes reutilizáveis e uma atualização eficiente do DOM.
 
-    *Next.JS 14.1*: Utilizando a versão mais recente do Next.JS, o My-Deezer se beneficia das últimas melhorias e recursos da biblioteca, incluindo renderização do lado do servidor (SSR) e geração de páginas estáticas.
+    *Next.JS 14.1* : Utilizando a versão mais recente do Next.JS, o My-Deezer se beneficia das últimas melhorias e recursos da biblioteca, incluindo renderização do lado do servidor (SSR) e geração de páginas estáticas.
 
-    *Styled-Components*: A estilização do aplicativo foi feita com a biblioteca Styled-Components, proporcionando uma abordagem simples e modular para estilizar componentes React.
+    *Styled-Components* : A estilização do aplicativo foi feita com a biblioteca Styled-Components, proporcionando uma abordagem simples e modular para estilizar componentes React.
 
-    *Axios*: A biblioteca Axios foi utilizada para realizar requisições HTTP, facilitando a integração com a API da Deezer.
+    *Axios* : A biblioteca Axios foi utilizada para realizar requisições HTTP, facilitando a integração com a API da Deezer.
 
 ## Instalação e Execução do Projeto
 
@@ -22,7 +22,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 `npm run dev`
 
-3. O aplicativo estará disponível em http://localhost:3000.
+2. O aplicativo estará disponível em http://localhost:3000.
    
 ## Uso do Projeto
 
