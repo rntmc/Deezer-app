@@ -1,4 +1,5 @@
 My-Deezer
+
 Descrição do Projeto
 
 O My-Deezer é uma aplicação web que proporciona aos usuários uma experiência completa para explorar, ouvir e salvar suas músicas favoritas do Deezer. A aplicação exibe informações detalhadas sobre músicas, artistas e álbuns, permitindo a reprodução de prévias, salvamento de favoritos e redirecionamento para o Deezer para uma audição completa.
